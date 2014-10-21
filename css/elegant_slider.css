@@ -1,0 +1,23 @@
+﻿.slider {
+  margin: 10px 0;
+  max-width: 262px; /* Update to your slider width */
+  width: 99.86%;
+  height: 167px; /* Update to your slider height */
+  position: relative;
+  overflow: hidden;
+}
+
+.slider ul{
+  width: 100%;
+  height: inherit;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  border: 0;
+}
+.slider li {
+  display: none;
+	list-style: none;
+	float: left;
+	margin-right: 12px
+}
