@@ -2,10 +2,11 @@
 
 @author       Oscar Peña - @os-pena
 @link            ???
-@github        https://github.com/os-pena/elegant-jQuery-Carousel-Slider
+@github        https://github.com/os-pena/Elegant-jQuery-Carousel-Slider
 @version     0.0.2
 @license      ISC license
 based on Simple-jQuery-Carousel-Slider : https://github.com/paulmason/Simple-jQuery-Carousel-Slider
+
 ----------------------------------------------------------------------------------------------*/
 
 
