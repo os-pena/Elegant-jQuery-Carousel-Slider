@@ -49,7 +49,7 @@ jQuery(function ($) {
         window.clearInterval($interval);
     }
 
-    $(".slider").hover(
+    $slider.hover(
 
     function () {
         pauseLoop(); // pause the loop
@@ -58,5 +58,19 @@ jQuery(function ($) {
     function () {
         startloop(); //scroll()
     });
+    
+    $slide.addEventListener('touchstart', function(e){
+	alert ('paused');
+  	e.preventDefault()
+ 	}, false);
+	
+	$slide.addEventListener('touchend', function(e){
+	alert ('paused');
+	startloop(); 
+  e.preventDefault()
+ }, false)
+ 
+
+    
     return startloop();
 });
