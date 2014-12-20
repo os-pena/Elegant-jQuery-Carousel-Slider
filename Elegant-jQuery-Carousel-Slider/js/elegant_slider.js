@@ -59,18 +59,5 @@ jQuery(function ($) {
         startloop(); //scroll()
     });
     
-    $slide.addEventListener('touchstart', function(e){
-	alert ('paused');
-  	e.preventDefault()
- 	}, false);
-	
-	$slide.addEventListener('touchend', function(e){
-	alert ('paused');
-	startloop(); 
-  e.preventDefault()
- }, false)
- 
-
-    
     return startloop();
 });
