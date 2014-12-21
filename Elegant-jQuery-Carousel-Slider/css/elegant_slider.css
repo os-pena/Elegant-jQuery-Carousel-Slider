@@ -15,12 +15,6 @@
   left: 0; 
   border: 0;
 }
-.slider li {
-  display: none;
-	list-style: none;
-	float: left;
-	margin-right: 12px
-}
 @media screen and (max-width: 480px) {
     .slider {
         width: 97%;

@@ -6,7 +6,6 @@
 @version     0.0.2
 @license      ISC license
 based on Simple-jQuery-Carousel-Slider : https://github.com/paulmason/Simple-jQuery-Carousel-Slider
-
 ----------------------------------------------------------------------------------------------*/
 
 
@@ -40,9 +39,8 @@ jQuery(function ($) {
             slides().eq($i).fadeOut($transition_time);
 
             if (slides().length == $i + 1) $i = -1; // loop to start
-
-            slides().eq($i + 1).fadeIn($transition_time);
             slides().eq($i + 1).addClass('active');
+            slides().eq($i + 1).fadeIn($transition_time+ 2000);
         }, $transition_time + $time_between_slides);
     }
     function pauseLoop() {
@@ -58,6 +56,5 @@ jQuery(function ($) {
     function () {
         startloop(); //scroll()
     });
-    
     return startloop();
 });
