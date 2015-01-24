@@ -1,4 +1,4 @@
-﻿.slider {
+﻿.slider_cnt {
   margin: 10px 0;
   max-width: 262px; /* Update to your slider width */
   width: 99.86%;
@@ -7,13 +7,17 @@
   overflow: hidden;
 }
 
-.slider ul{
+.slider{
   width: 100%;
+  list-style:none;
   height: inherit;
   position: absolute; 
   top: 0; 
   left: 0; 
   border: 0;
+}
+.slider img{
+	display: none;
 }
 @media screen and (max-width: 480px) {
     .slider {

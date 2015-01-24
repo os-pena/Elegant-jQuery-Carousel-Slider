@@ -13,11 +13,14 @@ jQuery(function ($) {
 
     // settings
     var $slider = $('.slider'); // class or id of carousel slider
-    var $slide = 'li'; // could also use 'img' if you're not using a li
+    var $slide; // could also use 'img' if you're not using a li
     var $transition_time = 1000; // 1 second
     var $time_between_slides = 2300; // 2.3 seconds
     var $interval;
-
+	function initialize(slide){
+		$slide = slide;
+		startloop();
+	}
     function slides() {
         return $slider.find($slide);
     }
@@ -56,5 +59,5 @@ jQuery(function ($) {
     function () {
         startloop(); //scroll()
     });
-    return startloop();
+    return initialize();
 });
