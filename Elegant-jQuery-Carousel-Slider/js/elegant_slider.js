@@ -10,26 +10,39 @@ based on Simple-jQuery-Carousel-Slider : https://github.com/paulmason/Simple-jQu
 
 
 jQuery(function ($) {
-
+	this.elegantNamespace = this.elegantNamespace || {};
+	var ns = this.elegantNamespace;
+	
     // settings
     var $slider = $('.slider'); // class or id of carousel slider
     var $slide; // could also use 'img' if you're not using a li
     var $transition_time = 1000; // 1 second
     var $time_between_slides = 2300; // 2.3 seconds
     var $interval;
-	function initialize(slide){
-		$slide = slide;
-		startloop();
-	}
-    function slides() {
-        return $slider.find($slide);
-    }
+	ns.initialize = function(slide){
 
+		$slide = slide;
     slides().fadeOut();
 
     // set active classes
     slides().first().addClass('active');
     slides().first().fadeIn($transition_time);
+
+    $slider.hover(
+
+    function () {
+        pauseLoop(); // pause the loop
+    },
+
+    function () {
+        startloop(); //scroll()
+    });
+		startloop();
+	}
+	
+    function slides() {
+        return $slider.find($slide);
+    }
 
     // auto scroll 
     function startloop() {
@@ -50,14 +63,5 @@ jQuery(function ($) {
         window.clearInterval($interval);
     }
 
-    $slider.hover(
-
-    function () {
-        pauseLoop(); // pause the loop
-    },
-
-    function () {
-        startloop(); //scroll()
-    });
-    return initialize();
-});
+    //return initialize();
+})();
